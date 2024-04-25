@@ -1,11 +1,12 @@
-/**************************************************************************************************
- * Copyright (c) 2024 Calypso Networks Association https://calypsonet.org/                        *
- *                                                                                                *
- * This program and the accompanying materials are made available under the                       *
- * terms of the MIT License which is available at https://opensource.org/licenses/MIT.            *
- *                                                                                                *
- * SPDX-License-Identifier: MIT                                                                   *
- **************************************************************************************************/
+/******************************************************************************
+ * Copyright (c) 2025 Calypso Networks Association https://calypsonet.org/    *
+ *                                                                            *
+ * This program and the accompanying materials are made available under the   *
+ * terms of the MIT License which is available at                             *
+ * https://opensource.org/licenses/MIT.                                       *
+ *                                                                            *
+ * SPDX-License-Identifier: MIT                                               *
+ ******************************************************************************/
 
 #pragma once
 
@@ -44,10 +45,12 @@ public:
     virtual int getMaxCardApduLengthSupported() const = 0;
 
     /**
-     * Retrieves and stores the terminal challenge in the SAM image for later use.
+     * Retrieves and stores the terminal challenge in the SAM image for later
+     * use.
      *
      * @throws SymmetricCryptoException If an internal error occurred.
-     * @throw SymmetricCryptoIOException If an IO error occurred when processing a command.
+     * @throw SymmetricCryptoIOException If an IO error occurred when processing
+     * a command.
      * @since 0.1.0
      */
     virtual void preInitTerminalSessionContext() = 0;
@@ -55,17 +58,19 @@ public:
     /**
      * Returns a new instance of SymmetricCryptoCardTransactionManagerSpi.
      *
-     * @param cardKeyDiversifier The card key diversifier to use for the coming cryptographic
-     *        computations.
-     * @param useExtendedMode Request the use of the extended mode if supported by the crypto
-     *        service.
-     * @param transactionAuditData The reference of the list where the transaction audit data are
-     *        recorded.
-     * @return A new instance of {@link SymmetricCryptoCardTransactionManagerSpi}.
+     * @param cardKeyDiversifier The card key diversifier to use for the coming
+     * cryptographic computations.
+     * @param useExtendedMode Request the use of the extended mode if supported
+     * by the crypto service.
+     * @param transactionAuditData The reference of the list where the
+     * transaction audit data are recorded.
+     * @return A new instance of {@link
+     * SymmetricCryptoCardTransactionManagerSpi}.
      * @throw IllegalStateException If the extended mode is not supported.
      * @since 0.1.0
      */
-    virtual std::shared_ptr<SymmetricCryptoCardTransactionManagerSpi> createCardTransactionManager(
+    virtual std::shared_ptr<SymmetricCryptoCardTransactionManagerSpi>
+    createCardTransactionManager(
         const std::vector<uint8_t>& cardKeyDiversifier,
         const bool useExtendedMode,
         const std::vector<std::vector<uint8_t>>& transactionAuditData)

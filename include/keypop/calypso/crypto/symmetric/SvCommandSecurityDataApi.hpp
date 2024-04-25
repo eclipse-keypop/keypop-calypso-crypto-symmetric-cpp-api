@@ -1,11 +1,12 @@
-/**************************************************************************************************
- * Copyright (c) 2024 Calypso Networks Association https://calypsonet.org/                        *
- *                                                                                                *
- * This program and the accompanying materials are made available under the                       *
- * terms of the MIT License which is available at https://opensource.org/licenses/MIT.            *
- *                                                                                                *
- * SPDX-License-Identifier: MIT                                                                   *
- **************************************************************************************************/
+/******************************************************************************
+ * Copyright (c) 2025 Calypso Networks Association https://calypsonet.org/    *
+ *                                                                            *
+ * This program and the accompanying materials are made available under the   *
+ * terms of the MIT License which is available at                             *
+ * https://opensource.org/licenses/MIT.                                       *
+ *                                                                            *
+ * SPDX-License-Identifier: MIT                                               *
+ ******************************************************************************/
 
 #pragma once
 
@@ -35,7 +36,8 @@ public:
     /**
      * Returns the "SV Get" outgoing command data.
      *
-     * @return A not empty byte array containing the "SV Get" apdu response data.
+     * @return A not empty byte array containing the "SV Get" apdu response
+     * data.
      * @since 0.1.0
      */
     virtual const std::vector<uint8_t>& getSvGetResponse() const = 0;
@@ -55,7 +57,9 @@ public:
      * @return The current instance.
      * @since 0.1.0
      */
-    virtual SvCommandSecurityDataApi& setSerialNumber(const std::vector<uint8_t>& serialNumber) = 0;
+    virtual SvCommandSecurityDataApi&
+    setSerialNumber(const std::vector<uint8_t>& serialNumber)
+        = 0;
 
     /**
      * Sets the transaction number to be placed in the "SV Load/Debit/Undebit" command request.
@@ -75,7 +79,7 @@ public:
      * @return The current instance.
      * @since 0.1.0
      */
-    virtual SvCommandSecurityDataApi
+    virtual SvCommandSecurityDataApi&
     setTerminalChallenge(const std::vector<uint8_t>& terminalChallenge)
         = 0;
 
@@ -86,7 +90,8 @@ public:
      * @return The current instance.
      * @since 0.1.0
      */
-    virtual SvCommandSecurityDataApi setTerminalSvMac(const std::vector<uint8_t>& terminalSvMac)
+    virtual SvCommandSecurityDataApi&
+    setTerminalSvMac(const std::vector<uint8_t>& terminalSvMac)
         = 0;
 };
 

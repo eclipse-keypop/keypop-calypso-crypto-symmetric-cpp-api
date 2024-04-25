@@ -1,11 +1,12 @@
-/**************************************************************************************************
- * Copyright (c) 2024 Calypso Networks Association https://calypsonet.org/                        *
- *                                                                                                *
- * This program and the accompanying materials are made available under the                       *
- * terms of the MIT License which is available at https://opensource.org/licenses/MIT.            *
- *                                                                                                *
- * SPDX-License-Identifier: MIT                                                                   *
- **************************************************************************************************/
+/******************************************************************************
+ * Copyright (c) 2025 Calypso Networks Association https://calypsonet.org/    *
+ *                                                                            *
+ * This program and the accompanying materials are made available under the   *
+ * terms of the MIT License which is available at                             *
+ * https://opensource.org/licenses/MIT.                                       *
+ *                                                                            *
+ * SPDX-License-Identifier: MIT                                               *
+ ******************************************************************************/
 
 #pragma once
 
@@ -23,15 +24,15 @@ namespace symmetric {
  *
  * @since 0.1.0
  */
-class SymmetricCryptoException final : std::exception {
+class SymmetricCryptoException final : public std::exception {
 public:
     /**
      * @param message The message to identify the exception context.
      * @since 0.1.0
      */
-    explicit SymmetricCryptoException(const std::string& message)
-    : std::exception() {
-        (void)message;
+    explicit SymmetricCryptoException(const std::string& /*message*/)
+    : std::exception()
+    {
     }
 
     /**
@@ -42,9 +43,9 @@ public:
      * @since 0.1.0
      */
     SymmetricCryptoException(
-        const std::string& message, const std::shared_ptr<std::exception> cause)
-    : std::exception(*cause) {
-        (void)message;
+        const std::string& /*message*/, const std::exception& cause)
+    : std::exception(cause)
+    {
     }
 };
 
