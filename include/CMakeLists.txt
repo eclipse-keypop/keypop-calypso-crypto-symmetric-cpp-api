@@ -18,7 +18,7 @@ ADD_LIBRARY(
 TARGET_INCLUDE_DIRECTORIES(
     ${LIBRARY_NAME}
     INTERFACE
-    ${CMAKE_CURRENT_SOURCE_DIR}/keypop/calyso
+    ${CMAKE_CURRENT_SOURCE_DIR}/keypop/calyso/crypto/symmetric
 )
 
 ADD_LIBRARY(Keypop::Calypso::Crypto::Symmetric ALIAS ${LIBRARY_NAME})
