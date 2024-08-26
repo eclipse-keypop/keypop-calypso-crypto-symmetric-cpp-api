@@ -1,0 +1,4 @@
+theme: jekyll-theme-minimal
+title: Keypop Calypso Crypto Symmetric C++ API
+include:
+  - "_*.html"
