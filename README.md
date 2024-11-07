@@ -22,7 +22,7 @@ and validation.
 - **Modular Interfaces**: Designed to support modular extensions, allowing developers to implement custom functionality
   while adhering to the standardized interface structure defined by this project.
 - **Compliance**: Aligned with the specifications of the Calypso Networks Association, ensuring that implementations
-  conform to recognized standards, which is crucial for securing card transactions with symmetric cryptography modules.
+  conform to recognized standards, which is crucial for the terminal Calypso card layer certification.
 
 ## Usage
 To use the interface definitions in your project, include the relevant headers in your source files and provide concrete
@@ -30,7 +30,7 @@ implementations of the defined interfaces as needed.
 
 ## Documentation & Contribution Guide
 The full documentation, including the **UML diagrams** and **design guide**, is available on
-the [Keypop website](https://eclipse-keypop.github.io/keypop-website/).
+the [Keypop website](https://keypop.org/apis/calypso-layer/calypso-symmetric-crypto-api/).
 
 ### Contributing
 Refer to the [contributing guide](https://keypop.org/community/contributing/) file for guidelines on how to contribute.
