@@ -1,0 +1,39 @@
+/**
+ * @mainpage Keypop Calypso Crypto Symmetric C++ API Documentation
+ *
+ * @section overview Overview
+ *
+ * The Keypop Calypso Crypto Symmetric C++ API defines interfaces for cryptographic operations
+ * required by Calypso cards when using symmetric keys. This C++ interface provides a port of the
+ * reference Calypso Networks Association specifications.
+ *
+ * @section architecture Architecture & Components
+ *
+ * @subsection transaction_managers Transaction Management
+ *
+ * - keypop::calypso::crypto::symmetric::spi::SymmetricCryptoCardTransactionManagerSpi
+ *   Core interface for Calypso card symmetric cryptographic operations
+ *
+ * - keypop::calypso::crypto::symmetric::spi::SymmetricCryptoCardTransactionManagerFactorySpi
+ *   Factory for creating transaction manager instances
+ *
+ * @subsection security_data Security Data Handling
+ *
+ * - keypop::calypso::crypto::symmetric::SvCommandSecurityDataApi
+ *   Interface for managing SV command security data (LOAD/DEBIT/UNDEBIT)
+ *
+ * @subsection properties API Properties
+ *
+ * - keypop::calypso::crypto::symmetric::SymmetricCryptoApiProperties
+ *   Version and configuration properties
+ *
+ * @section exceptions Exception Handling
+ *
+ * The API implements the following exception hierarchy:
+ *
+ * - keypop::calypso::crypto::symmetric::SymmetricCryptoException
+ *   Base class for cryptographic operation errors
+ *
+ * - keypop::calypso::crypto::symmetric::SymmetricCryptoIOException
+ *   IO-related cryptographic operation failures
+ */
