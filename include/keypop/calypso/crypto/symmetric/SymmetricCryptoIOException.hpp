@@ -30,8 +30,9 @@ public:
      * @param message The message to identify the exception context.
      * @since 0.1.0
      */
-    explicit SymmetricCryptoIOException(const std::string& /*message*/)
+    explicit SymmetricCryptoIOException(const std::string& message)
     : std::exception()
+    , mMessage(message)
     {
     }
 
@@ -43,10 +44,26 @@ public:
      * @since 0.1.0
      */
     SymmetricCryptoIOException(
-        const std::string& /*message*/, const std::exception& cause)
-    : std::exception(cause)
+        const std::string& message, const std::exception& /*cause*/)
+    : std::exception()
+    , mMessage(message)
     {
     }
+
+    /**
+     * @since 0.1.0
+     */
+    const char*
+    what() const noexcept override
+    {
+        return mMessage.c_str();
+    }
+
+private:
+    /**
+     *
+     */
+    std::string mMessage;
 };
 
 } /* namespace symmetric */
