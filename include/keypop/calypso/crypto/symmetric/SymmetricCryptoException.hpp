@@ -30,8 +30,8 @@ public:
      * @param message The message to identify the exception context.
      * @since 0.1.0
      */
-    explicit SymmetricCryptoException(const std::string& /*message*/)
-    : std::exception()
+    explicit SymmetricCryptoException(const std::string& message)
+    : mMessage(message)
     {
     }
 
@@ -43,10 +43,34 @@ public:
      * @since 0.1.0
      */
     SymmetricCryptoException(
-        const std::string& /*message*/, const std::exception& cause)
-    : std::exception(cause)
+        const std::string& message, const std::exception& cause)
+    : mMessage(message)
+    , mCause(cause.what() != nullptr ? cause.what() : "")
     {
     }
+
+    /**
+     * Returns the detail message, so that what() reports it instead of the
+     * default "Unknown exception" of std::exception.
+     */
+    const char*
+    what() const noexcept override
+    {
+        return mMessage.c_str();
+    }
+
+    /**
+     * Returns the message of the underlying cause, empty if none.
+     */
+    const std::string&
+    getCause() const noexcept
+    {
+        return mCause;
+    }
+
+private:
+    std::string mMessage;
+    std::string mCause;
 };
 
 } /* namespace symmetric */
