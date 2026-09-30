@@ -1,7 +1,0 @@
-var classkeypop_1_1calypso_1_1crypto_1_1symmetric_1_1spi_1_1_symmetric_crypto_card_transaction_manager_factory_spi =
-[
-    [ "createCardTransactionManager", "classkeypop_1_1calypso_1_1crypto_1_1symmetric_1_1spi_1_1_symmetric_crypto_card_transaction_manager_factory_spi.html#a34cf8c466f22ba95d16bb6276b0f0e1a", null ],
-    [ "getMaxCardApduLengthSupported", "classkeypop_1_1calypso_1_1crypto_1_1symmetric_1_1spi_1_1_symmetric_crypto_card_transaction_manager_factory_spi.html#a6d6b85a43429d645e36d29ace7abe9c6", null ],
-    [ "isExtendedModeSupported", "classkeypop_1_1calypso_1_1crypto_1_1symmetric_1_1spi_1_1_symmetric_crypto_card_transaction_manager_factory_spi.html#ac622b990ffe0e4cc9ddf3e09435fec47", null ],
-    [ "preInitTerminalSessionContext", "classkeypop_1_1calypso_1_1crypto_1_1symmetric_1_1spi_1_1_symmetric_crypto_card_transaction_manager_factory_spi.html#ad77bed8a64079755bcdb42eb789804b1", null ]
-];
