@@ -41,3 +41,6 @@ CMakeSettings.json
 
 # OS
 .DS_Store
+
+# Conan
+CMakeUserPresets.json
