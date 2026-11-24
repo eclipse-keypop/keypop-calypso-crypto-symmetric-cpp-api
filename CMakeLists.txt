@@ -11,7 +11,7 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.5)
 
 PROJECT(KeypopCalypsoCryptoSymmetricCppApi
-        VERSION 0.1.1
+        VERSION 0.1.2
         LANGUAGES C CXX)
 
 SET(CMAKE_MACOSX_RPATH 1)
